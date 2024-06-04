@@ -8,7 +8,7 @@ export default function JobListing({ isHome = false }) {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch("http://localhost:8000/jobs");
+        const res = await fetch("/api/jobs");
         const data = await res.json();
         isHome ? setJobs(data.slice(0, 3)) : setJobs(data);
       } catch (error) {
