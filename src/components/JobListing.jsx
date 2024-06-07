@@ -17,9 +17,7 @@ export default function JobListing({ isHome = false }) {
         setLoading(false);
       }
     };
-    setTimeout(() => {
-      fetchJobs();
-    }, 2000);
+    fetchJobs();
   }, []);
   return (
     <Section

@@ -21,7 +21,7 @@ export default function Navbar() {
           <NavLink to="/jobs" className={activeLink}>
             Jobs
           </NavLink>
-          <NavLink to="/jobs/add" className={activeLink}>
+          <NavLink to="/add-job" className={activeLink}>
             Add job
           </NavLink>
         </div>

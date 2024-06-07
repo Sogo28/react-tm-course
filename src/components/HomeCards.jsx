@@ -19,6 +19,7 @@ export default function HomeCards() {
             buttonBg="bg-indigo-600"
             cardCustom="bg-indigo-100"
             buttonCustom={"hover:bg-indigo-700"}
+            link="/add-job"
           />
         </div>
       </Section>
