@@ -10,6 +10,7 @@ import Jobs from "./pages/Jobs";
 import Job, { jobLoader } from "./pages/Job";
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./pages/NotFound";
+import EditJob from "./pages/EditJob";
 
 export default function App() {
   const addJob = async (newJob) => {
@@ -39,6 +40,7 @@ export default function App() {
           element={<Job deleteJob={deleteJob} />}
           loader={jobLoader}
         />
+        <Route path="/jobs/edit/:id" element={<EditJob />} loader={jobLoader} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )

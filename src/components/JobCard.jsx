@@ -39,7 +39,7 @@ export default function JobCard({
           link={link}
           bgColor="bg-indigo-600"
           custom="text-center hover:bg-indigo-700"
-          text="Apply Now"
+          text="Read more"
         />
       </div>
     </div>
