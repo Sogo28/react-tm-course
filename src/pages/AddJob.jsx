@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useStore } from "../store/JobStore";
 
-const AddJobPage = ({ addJobSubmit }) => {
+const AddJobPage = () => {
+
+  const addJob = useStore((state) => state.addJob);
+
   const [title, setTitle] = useState("");
   const [type, setType] = useState("Full-Time");
   const [location, setLocation] = useState("");
@@ -32,7 +36,7 @@ const AddJobPage = ({ addJobSubmit }) => {
       },
     };
 
-    addJobSubmit(newJob);
+    addJob(newJob);
     toast.success("Job added successfully");
 
     return navigate("/jobs");

@@ -2,23 +2,14 @@ import JobCard from "./JobCard";
 import Section from "./Section";
 import { useState, useEffect } from "react";
 import Loading from "./Loading";
-export default function JobListing({ isHome = false }) {
-  const [jobs, setJobs] = useState([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        const res = await fetch("/api/jobs");
-        const data = await res.json();
-        isHome ? setJobs(data.slice(0, 3)) : setJobs(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchJobs();
-  }, []);
+import { useStore } from "../store/JobStore";
+export default function JobListing({ isHome }) {
+
+  const { jobs, loading } = useStore((state) => ({
+    jobs: isHome ? state.jobs.slice(0, 3) : state.jobs,
+    loading: state.loading
+  }));
+
   return (
     <Section
       bgColor={"bg-slate-100"}

@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "30f9",
+      "title": "test job ",
+      "type": "Full-Time",
+      "location": "Fouta",
+      "description": "",
+      "salary": "Under $50K",
+      "company": {
+        "name": "My company",
+        "description": "a simple description",
+        "contactEmail": "test@gmail.com",
+        "contactPhone": "776458878"
+      }
     }
   ]
 }
