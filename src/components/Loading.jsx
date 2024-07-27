@@ -6,11 +6,14 @@ const override = {
 };
 export default function Loading({ loading }) {
   return (
-    <SyncLoader
-      color="#4338ca"
-      loading={loading}
-      cssOverride={override}
-      size={20}
-    />
+    <div className="h-screen flex flex-col justify-center items-center">
+      <SyncLoader
+        color="#4338ca"
+        loading={loading}
+        cssOverride={override}
+        size={20}
+      />
+    </div>
+
   );
 }
